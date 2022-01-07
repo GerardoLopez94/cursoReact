@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-const saludo = <h1>Hola Mundo</h1>;
+import { PrimerApp } from "./PrimeraApp";
+import './index.css';
 
 const divApp = document.querySelector('#app');
 
-ReactDOM.render(saludo, divApp);
+ReactDOM.render(<PrimerApp />, divApp);
