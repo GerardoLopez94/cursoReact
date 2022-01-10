@@ -1,15 +1,14 @@
 //FC
 import React from "react";
 import PropTypes from 'prop-types'
-const PrimerApp = ( { prueba  }) => {
+const PrimerApp = ( { prueba , subtitulo }) => {
     
     console.log(prueba);
 
     return (
         <>
             <h1>{prueba}</h1>
-           <p>Hola</p>
-
+            <p>{subtitulo}</p>
         </>
         );
 }
@@ -17,5 +16,9 @@ const PrimerApp = ( { prueba  }) => {
 PrimerApp.propTypes = {
     prueba: PropTypes.string.isRequired,
 
+};
+
+PrimerApp.defaultProps ={
+    subtitulo: 'Soy un subtitulo',
 }
 export { PrimerApp }
