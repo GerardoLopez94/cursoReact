@@ -5,4 +5,4 @@ import './index.css';
 
 const divApp = document.querySelector('#app');
 
-ReactDOM.render(<PrimerApp />, divApp);
+ReactDOM.render(<PrimerApp prueba="Hello, I am Gerard" />, divApp);
