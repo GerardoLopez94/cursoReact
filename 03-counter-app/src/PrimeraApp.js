@@ -1,27 +1,21 @@
 //FC
 import React from "react";
-const PrimerApp = ( { prueba = 'Valor por defecto' }) => {
-    const saludo = 'Hola Mundo, Hello';
-    const numeros = [1,2,3,4,5,6,7,8,9];
-    const persona = {
-        nombre: "Gerardo",
-        apellido:"Lopez",
-        edad: 27
-    }
-
+import PropTypes from 'prop-types'
+const PrimerApp = ( { prueba  }) => {
+    
     console.log(prueba);
 
     return (
         <>
             <h1>{prueba}</h1>
-            <h1>{saludo}</h1>
-            <h2>{numeros}</h2>
-            <h3>{JSON.stringify(persona, null,3)}</h3>
-            <pre>{JSON.stringify(persona, null,3)}</pre>
            <p>Hola</p>
 
         </>
         );
 }
 
+PrimerApp.propTypes = {
+    prueba: PropTypes.string.isRequired,
+
+}
 export { PrimerApp }
