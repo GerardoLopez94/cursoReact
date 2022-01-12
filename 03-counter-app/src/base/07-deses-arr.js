@@ -2,7 +2,7 @@
 
 const personajes = ['Goku','Vegeta','Trunks'];
 const [ , , p3 ] = personajes;
-console.log( p3 );
+
 
 
 const retornaArreglo = () =>{
@@ -10,7 +10,7 @@ const retornaArreglo = () =>{
 }
 
 const [ letras, numeros ] = retornaArreglo(); 
-console.log(letras, numeros);
+
 
 
 // Tarea
@@ -20,11 +20,7 @@ const usState = ( valor ) => {
     return [ valor, ()=>{ console.log('Hola Mundo') } ];
 }
 
-const [ nombre, setNombre ] = usState( 'Goku' );
-
-console.log( nombre );
-setNombre();
-
+export { retornaArreglo };
 
 
 
