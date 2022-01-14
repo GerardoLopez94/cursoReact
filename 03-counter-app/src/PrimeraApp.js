@@ -7,8 +7,8 @@ const PrimerApp = ( { prueba , subtitulo }) => {
 
     return (
         <>
-            <h1>{prueba}</h1>
-            <p>{subtitulo}</p>
+            <h1> {prueba} </h1>
+            <p> {subtitulo} </p>
         </>
         );
 }
