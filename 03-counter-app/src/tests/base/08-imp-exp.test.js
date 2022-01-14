@@ -40,7 +40,7 @@ describe('Pruebas en 08-imp-exp', () =>{
     //debe de retornar un arreglo con los heroes de Marvel 
     //length = 2
 
-    test('debe de retornar un arreglo con los heroes de Marvel ', () =>{
+    test('debe de retornar un arreglo con los heroes de Marvel', () =>{
         const owner = 'Marvel';
 
         const arrHeroes = getHeroesByOwner(owner);
