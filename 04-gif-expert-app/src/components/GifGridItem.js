@@ -1,9 +1,13 @@
 import React from 'react';
 
-const GifGridItem = ({img}) =>{
+const GifGridItem = (img) =>{
     return (
-        <div>
-            { img.title }
+        <div className="card">
+           <img 
+            src={ img.url } 
+            alt={ img.title }
+            />
+            <p>{ img.title }</p>
         </div>
     )
 
