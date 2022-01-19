@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import { GifGridItem } from './GifGridItem';
+
 
 const GifGrid = ({ category }) =>{
 
-    
+    const [images, setImages] = useState([]);
+
+    useEffect(() =>{
+        getGifs();
+    }, [])
     const getGifs = async() =>{
         const baseURL = process.env.REACT_APP_API;
         const url = `https://api.giphy.com/v1/gifs/search?api_key=${baseURL}&q=conga&limit=10`;
@@ -18,14 +25,24 @@ const GifGrid = ({ category }) =>{
             }
         })
 
-        console.log(gifs)
+        setImages(gifs);
         
     }
-    getGifs();
+    
 
     return (
         <>
             <h3> { category } </h3>
+           
+            {
+                images.map( (img) => 
+                    <GifGridItem 
+                        img ={img} 
+                        key={img.id}
+                    />
+                )
+            }
+           
         </>
     )
 }
