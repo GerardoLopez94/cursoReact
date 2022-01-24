@@ -2,7 +2,7 @@ import React from 'react';
 
 const GifGridItem = (img) =>{
     return (
-        <div className="card">
+        <div className="card animate__bounceIn">
            <img 
             src={ img.url } 
             alt={ img.title }

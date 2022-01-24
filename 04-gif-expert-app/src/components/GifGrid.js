@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+
+import { useFetchGifs } from '../hooks/useFetchGifs';
 
 import { GifGridItem } from './GifGridItem';
 
-import { getGifs } from '../helpers/getGifs';
+
+
+
 
 
 const GifGrid = ({ category }) =>{
 
-    const [images, setImages] = useState([]);
-
-    useEffect(() =>{
-        getGifs(category)
-            .then( imgs => setImages(imgs))
-    }, [category])
-    
-    
+    //const [images, setImages] = useState([]);
+    const {loading, data: images} = useFetchGifs(category);
 
     return (
         <>
-        <h3> { category } </h3>
+        <h3 className='animate__bounceIn'> { category } </h3>
         <br />
+        { loading && <p>Loading</p> }
         <div className='card-grid'>
            
             {
