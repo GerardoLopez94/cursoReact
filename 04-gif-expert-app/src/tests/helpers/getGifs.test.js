@@ -1,5 +1,6 @@
 import { getGifs } from "../../helpers/getGifs";
 
+
 describe('Pruebas con getGifs Fecth', () => {
 
     test('debe de traer 10 elementos', async() =>{
