@@ -3,7 +3,7 @@ import React, {  useState } from 'react';
 
 
 import './effect.css';
-import { useForm } from './useForm';
+import { useForm } from '../hooks/useForm';
 
 const FormWithCustomHook = () => {
 
