@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import { Memorize } from './components/06-memos/Memorize';
 
-import { FocusScreen } from './components/04_useRef/FocusScreen';
+
+
+
 
 
 
 
 ReactDom.render(
-    <FocusScreen />,
+    <Memorize />,
     document.getElementById('root')
 );
