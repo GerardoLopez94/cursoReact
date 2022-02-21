@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { Memorize } from './components/06-memos/Memorize';
 
-
-
-
-
+import { TodoApp } from './components/08-useReducer/TodoApp';
 
 
 
 ReactDom.render(
-    <Memorize />,
+    <TodoApp />,
     document.getElementById('root')
 );
