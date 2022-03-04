@@ -9,10 +9,10 @@ const useForm = (initialState = {}) => {
 
     const handleInputChange = ({ target }) =>{
 
-        setValues({
+        setValues( () => ({
             ...values,
             [ target.name ]: target.value
-        });
+        }));
     };
 
     return [values, handleInputChange, reset];
